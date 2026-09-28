@@ -40,4 +40,4 @@ public class CustomMath {
         //b = 1 + |y - x| + (y - x)^2 / 2 + |(y - x)^3| / 3 если: x = 1, y = 1 ответ: 1.0
         assert CustomMath.calc_b(1.0, 1.0) == 1.0;
     }
-}//проверка
+}

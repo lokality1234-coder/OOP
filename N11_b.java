@@ -65,4 +65,4 @@ public class N11_b {
         System.out.printf("\nОтвет:\na = %.3f;\nb = %.3f\n", a, b);
     }
 
-}//проверка
+}
