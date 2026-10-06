@@ -9,7 +9,7 @@ import java.util.Scanner;
 //подключение класса для обработки ошибки при неправильном вводе
 import java.util.InputMismatchException;
 
-//Обьявление класса, в Java всё находить внутри классо.
+//Обьявление класса, в Java всё находить внутри классов
 //public - значит класс доступен извне, "N11_b" - имя класса,должна совпадать в именем файла
 public class N11_b {
 
@@ -17,10 +17,10 @@ public class N11_b {
     //Функция вывода справки по использованию программы
     static void printHelp(){
         System.out.println("  Справка:");
-        System.out.println("  java Main                - ввод данных через консоль");
-        System.out.println("  java Main <x> <y> <z>    - передача значений через аргументы");
-        System.out.println("  java Main -h           - вывод этой справки");
-        System.out.println("  java Main --help         - вывод этой справки");
+        System.out.println("  java N11_b                - ввод данных через консоль");
+        System.out.println("  java N11_b <x> <y> <z>    - передача значений через аргументы");
+        System.out.println("  java N11_b -h           - вывод этой справки");
+        System.out.println("  java N11_b --help         - вывод этой справки");
     }
 
     //Главный метод, String[] args - массив строк, переданных при запуске программы
@@ -68,7 +68,6 @@ public class N11_b {
             //catch - перехватывает ошибку
             //(InputMismatchException e) - если метод класса Scanner (nextDouble()) ожидает один тип а получает другой
         } catch (InputMismatchException e) {
-
             //вывод сообщения об ошибке
             System.out.println("Ошибка: необходимо вводить только числа.");
         }
