@@ -15,9 +15,28 @@ import java.util.Scanner;
 //public - значит класс доступен извне, "N136_d" - имя класса,должна совпадать в именем файла
 public class N136_d {
 
+    //писать нужно именно в главном файле так как он вызываеться первым
+    //Функция вывода справки по использованию программы
+    static void printHelp() {
+        System.out.println("  Справка:");
+        System.out.println("  java N136_d               - ввод данных через консоль");
+        System.out.println("  java N136_d <n>     - передача значений через аргументы");
+        System.out.println("  java N136_d -h           - вывод этой справки");
+        System.out.println("  java N136_d --help         - вывод этой справки");
+    }
+
 
     //главный метод, String[] args - массив строк, переданныъ при запуске программы
     public static void main(String[] args) {
+
+        //проходим по всем аргументам командной строки
+        for (String arg : args) {
+            //если среди них есть -h или --help
+            if (arg.equals("-h") || arg.equals("--help")) {
+                printHelp(); //выводим справку
+                return;//завершаем, можно return заменить на break и программа продолжиться
+            }
+        }
 
         //часть кода в которой может быть ошибка
         try {
