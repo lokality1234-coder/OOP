@@ -4,6 +4,7 @@
 package gitok;
 
 //подключение типа (класса) для генерации случайного числа
+
 import java.util.InputMismatchException;
 import java.util.Random;
 //подключение типа (класса) для чтения данных с клавиатуры
@@ -15,16 +16,13 @@ import java.util.Scanner;
 public class N136_d {
 
 
-
     //главный метод, String[] args - массив строк, переданныъ при запуске программы
     public static void main(String[] args) {
 
-
-
-        Scanner in = new Scanner(System.in);//Создание обьекта для ввода с клавиатуры
-
-        System.out.println("Введите значение n:");//println - выводит значение и переводит курсор на новую строку
-
+        //часть кода в которой может быть ошибка
+        try {
+            Scanner in = new Scanner(System.in);//Создание обьекта для ввода с клавиатуры
+            System.out.println("Введите значение n:");//println - выводит значение и переводит курсор на новую строку
 
             //считывание числа n с клавиатуры
             int n = in.nextInt();
@@ -49,6 +47,14 @@ public class N136_d {
 
             //вычисление суммы квадратов и вывод её на экран
             System.out.printf("Сумма квадратов: %.2f%n", CalcArr.culc_arr());
+            //если нашлась ошибка InputMismatchException то выводит сообщение
+        } catch (InputMismatchException e) {
+            //вывод сообщения об ошибке
+            System.out.println("Ошибка: необходимо вводить только числа.");
+        } catch (NegativeArraySizeException e) {
+            //вывод сообщения об ошибке при отрицательном размере массива
+            System.out.println("Ошибка: размер массива не может быть отрицательным.");
+        }
 
 
     }
